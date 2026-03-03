@@ -30,8 +30,14 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           
           {/* Logo Area */}
-          <div className="flex items-center justify-center cursor-pointer bg-gradient-to-br from-slate-900 to-slate-800 p-2 md:p-2.5 rounded-xl shadow-lg border border-slate-700/50 transition-transform hover:scale-105">
-            <img src="/logo.png" alt="Saral Solutions" className="h-6 md:h-7 w-auto object-contain" />
+          <div
+            className={`flex items-center justify-center cursor-pointer rounded-xl transition-all duration-300 ${
+              scrolled
+                ? 'bg-slate-950/95 px-2.5 py-2 shadow-md border border-slate-700'
+                : 'bg-slate-950/90 px-2.5 py-2 shadow-lg border border-slate-600 backdrop-blur-sm'
+            }`}
+          >
+            <img src="/logo2.png" alt="Saral Solutions" className="h-8 md:h-9 w-28 md:w-32 object-cover object-center rounded-sm" />
           </div>
 
           {/* Desktop Nav */}
@@ -81,8 +87,8 @@ const Navbar = () => {
       <div className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-50 lg:hidden transform transition-transform duration-300 ease-in-out shadow-2xl flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-6 flex flex-col h-full overflow-y-auto">
           <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
-            <div className="bg-gradient-to-br from-slate-900 to-slate-800 p-2 rounded-lg shadow-md border border-slate-700/50">
-              <img src="/logo.png" alt="Saral Solutions" className="h-6 w-auto object-contain" />
+            <div className="bg-slate-950 p-2 rounded-lg shadow-md border border-slate-700">
+              <img src="/logo2.png" alt="Saral Solutions" className="h-8 w-28 object-cover object-center rounded-sm" />
             </div>
             <button className="p-2 text-slate-500 hover:bg-slate-100 rounded-md transition-colors" onClick={() => setIsOpen(false)}>
               <X size={24} />
