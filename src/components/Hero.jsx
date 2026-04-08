@@ -82,17 +82,7 @@ const Hero = () => {
             </div>
             
             {/* Trust metrics */}
-            <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 opacity-70">
-              <div className="flex flex-col">
-                <span className="text-3xl font-black text-dark">1k+</span>
-                <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Placed</span>
-              </div>
-              <div className="w-px h-10 bg-slate-300"></div>
-              <div className="flex flex-col">
-                <span className="text-3xl font-black text-dark">50+</span>
-                <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Projects</span>
-              </div>
-            </div>
+           
           </motion.div>
 
           {/* Premium 3D-like Mockup Composition */}
