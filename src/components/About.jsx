@@ -1,120 +1,96 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Lightbulb, CheckCircle } from 'lucide-react';
+import { Target, Lightbulb, CheckCircle, Users } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-[600px] bg-gradient-to-l from-blue-50 to-transparent"></div>
-      <div className="absolute -bottom-40 -left-20 w-80 h-80 rounded-full bg-primary/5 blur-[80px]"></div>
+    <section id="about" className="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+      {/* Enhanced decorative backgrounds */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.15),transparent),radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.15),transparent)]"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-[600px] bg-gradient-to-l from-blue-50 to-transparent opacity-80"></div>
+      <div className="absolute -bottom-40 -left-20 w-80 h-80 rounded-full bg-primary/10 blur-[80px]"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 xl:gap-24">
+        <div className="max-w-5xl mx-auto text-center">
           
-          {/* Left Column - Image/Stat Composition */}
+          {/* Hero Section */}
           <motion.div 
-            className="w-full lg:w-1/2 relative"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8 }}
+            className="mb-20"
           >
-            {/* Abstract Premium Composition */}
-            <div className="relative rounded-[2.5rem] bg-slate-50 p-6 md:p-10 border border-slate-200 shadow-2xl shadow-slate-200/50">
-              
-              {/* Backglows */}
-              <div className="absolute top-10 left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-blob"></div>
-              <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl animate-blob" style={{animationDelay: '2s'}}></div>
-              
-              <div className="grid grid-cols-2 gap-6 relative z-10">
-                {/* Stat block 1 */}
-                <div className="space-y-6">
-                  <div className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/40 border border-slate-100 flex flex-col items-center justify-center text-center transform hover:-translate-y-2 transition-transform duration-300">
-                    <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent mb-3">5+</div>
-                    <p className="text-slate-600 font-bold uppercase tracking-wider text-xs">Years of Excellence</p>
-                  </div>
-                  
-                  <div className="glass-dark p-8 rounded-[2rem] flex flex-col items-center justify-center text-center transform hover:-translate-y-2 transition-transform duration-300">
-                    <div className="text-5xl font-black text-white mb-3">1k+</div>
-                    <p className="text-primary-light font-bold uppercase tracking-wider text-xs">Students Placed</p>
-                  </div>
-                </div>
-                
-                {/* Stat block 2 */}
-                <div className="space-y-6 pt-12">
-                  <div className="bg-gradient-to-br from-secondary to-blue-500 p-8 rounded-[2rem] shadow-xl shadow-blue-500/30 flex flex-col items-center justify-center text-center text-white transform hover:-translate-y-2 transition-transform duration-300">
-                    <div className="text-5xl font-black mb-3">50+</div>
-                    <p className="text-blue-100 font-bold uppercase tracking-wider text-xs">Hiring Partners</p>
-                  </div>
-                  
-                  <div className="bg-white p-8 rounded-[2rem] shadow-xl shadow-slate-200/40 border border-slate-100 flex flex-col items-center justify-center text-center transform hover:-translate-y-2 transition-transform duration-300">
-                    <div className="text-5xl font-black text-slate-800 mb-3 text-gradient">100%</div>
-                    <p className="text-slate-600 font-bold uppercase tracking-wider text-xs">Practical Focus</p>
-                  </div>
-                </div>
+            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/50 shadow-2xl mb-12 mx-auto max-w-max">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary to-accent flex items-center justify-center shadow-lg">
+                <Users size={24} className="text-white" />
               </div>
-              
+              <span className="text-lg font-bold text-slate-800 tracking-wide">Discover Saral Solutions</span>
             </div>
             
-            {/* Decorative badge */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-slate-900 via-slate-700 to-black bg-clip-text text-transparent leading-tight mb-8 drop-shadow-2xl">
+              Excellence in IT Training
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-16 font-medium">
+              Jalgaon&apos;s leading IT training institute. Transforming students into industry-ready professionals through hands-on learning and real-world projects.
+            </p>
+          </motion.div>
+
+          {/* Features Grid */}
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            
             <motion.div 
-               animate={{ y: [0, -10, 0] }}
-               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-               className="absolute -bottom-6 -right-6 lg:-right-12 glass px-6 py-4 rounded-2xl flex items-center gap-4 z-20"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="group p-10 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/40 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-700 relative overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                <CheckCircle size={24} />
+              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-primary/20 rounded-3xl blur-xl -translate-x-24 translate-y-24 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-1000"></div>
+              <div className="w-24 h-24 rounded-2xl bg-gradient-to-r from-primary to-blue-600 flex items-center justify-center mb-8 text-white shadow-2xl group-hover:scale-110 transition-all duration-500 mx-auto">
+                <Target size={36} />
+              </div>
+              <h3 className="text-4xl font-black text-slate-900 mb-6 leading-tight">Our Mission</h3>
+              <p className="text-xl text-slate-600 leading-relaxed max-w-lg mx-auto">Bridge the academia-industry gap with practical IT training that prepares students for immediate success in real-world tech roles.</p>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="group p-10 rounded-3xl bg-white/60 backdrop-blur-xl border border-white/40 shadow-2xl hover:shadow-3xl hover:-translate-y-4 transition-all duration-700 relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-secondary/20 rounded-3xl blur-xl translate-x-24 -translate-y-24 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-1000"></div>
+              <div className="w-24 h-24 rounded-2xl bg-gradient-to-r from-secondary to-emerald-600 flex items-center justify-center mb-8 text-white shadow-2xl group-hover:scale-110 transition-all duration-500 mx-auto">
+                <Lightbulb size={36} />
+              </div>
+              <h3 className="text-4xl font-black text-slate-900 mb-6 leading-tight">Our Vision</h3>
+              <p className="text-xl text-slate-600 leading-relaxed max-w-lg mx-auto">Create Central India&apos;s premier tech talent hub by 2030, powering digital innovation with world-class software engineers.</p>
+            </motion.div>
+
+          </div>
+
+          {/* ISO Badge */}
+          <motion.div 
+            className="mt-24 p-6 rounded-2xl bg-emerald-50/50 backdrop-blur-xl border border-emerald-100 max-w-md mx-auto"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center shadow-xl">
+                <CheckCircle size={32} className="text-white" />
               </div>
               <div>
-                <p className="font-bold text-dark leading-tight">ISO Certified</p>
-                <p className="text-sm font-medium text-slate-500">Training Institute</p>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Column - Text Content */}
-          <motion.div 
-            className="w-full lg:w-1/2 pt-10 lg:pt-0"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-secondary font-semibold text-sm tracking-wide uppercase mb-6 border border-blue-100 shadow-sm">
-              Know Saral Solutions
-            </div>
-            
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-dark mb-8 leading-[1.1] tracking-tight">
-              Transforming Ambition into <span className="text-gradient">Achievement</span>
-            </h3>
-            
-            <p className="text-xl text-slate-600 mb-10 leading-relaxed font-medium">
-              We are Jalgaon's premier IT training and consulting center. Our mission is to bridge the massive gap between academic curricula and actual industry requirements through rigorous, project-oriented learning.
-            </p>
-
-            <div className="space-y-8">
-              <div className="group flex gap-6 p-6 rounded-3xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-colors duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300 text-primary">
-                  <Target size={28} />
-                </div>
-                <div>
-                  <h4 className="text-2xl font-bold text-dark mb-3">Our Mission</h4>
-                  <p className="text-slate-600 font-medium leading-relaxed">To provide accessible, high-caliber IT education that empowers regional youth to secure top tier tech careers globally.</p>
-                </div>
-              </div>
-              
-              <div className="group flex gap-6 p-6 rounded-3xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-colors duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-300 text-secondary">
-                  <Lightbulb size={28} />
-                </div>
-                <div>
-                  <h4 className="text-2xl font-bold text-dark mb-3">Our Vision</h4>
-                  <p className="text-slate-600 font-medium leading-relaxed">To establish Central India as a formidable hub for digital innovation and elite software engineering talent by 2030.</p>
-                </div>
+                <h4 className="text-2xl font-bold text-emerald-900 mb-1">ISO Certified</h4>
+                <p className="text-lg text-slate-700 font-semibold">Quality Training Institute</p>
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

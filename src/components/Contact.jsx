@@ -40,8 +40,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-2">Call Us</p>
-                    <p className="font-bold text-xl">+91 98765 43210</p>
-                    <p className="font-bold text-xl text-slate-300">+91 12345 67890</p>
+                    <p className="font-bold text-xl">+91 8080068554</p>
+                    <p className="font-bold text-xl text-slate-300">+91 9307963601</p>
                   </div>
                 </li>
                 
@@ -51,7 +51,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-2">Email Us</p>
-                    <p className="font-bold text-lg mb-1">info@saralsolutions.com</p>
+                    <p className="font-bold text-lg mb-1">1234klapeshmj@gmail.com</p>
                     <p className="font-bold text-lg text-slate-300">admissions@saralsolutions.com</p>
                   </div>
                 </li>
@@ -63,9 +63,7 @@ const Contact = () => {
                   <div>
                     <p className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-2">Visit Us</p>
                     <p className="font-bold text-lg leading-relaxed max-w-[250px]">
-                      Saral Solutions, <br />
-                      M.J. College Road,<br />
-                      Jalgaon, Maharashtra 425001
+                      Vitthal Shopping Complex, DSP Chouk, Above Durga Cafe, Near Naivedya Hotel Jalgaon, Maharashtra
                     </p>
                   </div>
                 </li>
@@ -74,7 +72,7 @@ const Contact = () => {
 
             <div className="relative z-10 mt-16 pt-10 border-t border-white/10 flex flex-col gap-4">
               <a 
-                href="https://wa.me/919876543210" 
+                href="https://wa.me/8080068554" 
                 target="_blank" 
                 rel="noreferrer"
                 className="w-full py-5 rounded-xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-black transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-[#25D366]/20 transform hover:-translate-y-1"
@@ -127,7 +125,7 @@ const Contact = () => {
             <div className="rounded-3xl overflow-hidden h-64 border-2 border-slate-100 shadow-md relative w-full bg-slate-200">
               {/* Google Map Placeholder */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119280.40748110996!2d75.49819779373979!3d21.007659422036496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd10bbbc6de44f5%3A0xe5452d3aafe0baed!2sJalgaon%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1715424602058!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6251550551933!2d75.5600289738324!3d21.007657780636322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd90f0036e49985%3A0xb4e3ce24c3c621a9!2sDSP%20chowk!5e0!3m2!1sen!2sin!4v1775629267263!5m2!1sen!2sin" 
                 className="absolute inset-0 w-full h-full border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" 
                 allowFullScreen="" 
                 loading="lazy" 
