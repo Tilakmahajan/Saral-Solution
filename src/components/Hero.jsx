@@ -1,147 +1,218 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code, Terminal, Cpu } from 'lucide-react';
+import { ArrowRight, BookOpen, Play, TrendingUp, Users, Cpu } from 'lucide-react';
 import { Link } from 'react-scroll';
+
+const metrics = [
+  { value: '120+', label: 'Clients Served', icon: <Users size={16} />, color: 'text-primary' },
+  { value: '35+', label: 'SaaS Tools Built', icon: <Cpu size={16} />, color: 'text-accent' },
+  { value: '500+', label: 'Learners Enrolled', icon: <BookOpen size={16} />, color: 'text-gold' },
+  { value: '3x', label: 'Avg. ROI Delivered', icon: <TrendingUp size={16} />, color: 'text-emerald-400' },
+];
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-[100svh] flex items-center justify-center pt-24 pb-12 overflow-hidden bg-slate-50">
-      {/* Premium Animated Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        {/* Dynamic gradient orbs */}
-        <motion.div 
-          animate={{ x: [0, 50, 0], y: [0, -50, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-40 -right-20 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-primary/10 to-accent/20 blur-[100px] opacity-70"
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-dark">
+
+      {/* --- Animated Background --- */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+        {/* Grid */}
+        <div className="absolute inset-0 bg-grid opacity-100" />
+
+        {/* Orb 1 — Blue */}
+        <motion.div
+          animate={{ x: [0, 40, 0], y: [0, -40, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-40 -right-20 w-[700px] h-[700px] rounded-full animate-glow-pulse"
+          style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.18) 0%, transparent 70%)' }}
         />
-        <motion.div 
-          animate={{ x: [0, -70, 0], y: [0, 40, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/3 -left-40 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-secondary/10 to-blue-300/20 blur-[120px] opacity-60"
+        {/* Orb 2 — Gold */}
+        <motion.div
+          animate={{ x: [0, -50, 0], y: [0, 50, 0] }}
+          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -bottom-40 -left-20 w-[600px] h-[600px] rounded-full animate-glow-pulse"
+          style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.14) 0%, transparent 70%)' }}
         />
-        
-        {/* Tech grid texture */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGwyMC0yMEw1NCAxMmwtMjAgMjAtdi0yaDIwVjEyai0ydjIwTDMyIDEyaC0ydjIwbS0yMCAwdjIwaC0ydi0yMEgxMHYyaDIwdi0yMGgtMnYyMGgtMjB2MmgyMHZtMjB2MjBoMnYtMjBoMjB2LTJoLTIwdi0yMGgtMnYyMEgzNHoifS8+PC9nPjwvc3ZnPg==')] opacity-[0.03]"></div>
-        
-        {/* Curved separator at bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
+        {/* Orb 3 — Purple */}
+        <motion.div
+          animate={{ x: [0, 30, -20, 0], y: [0, -30, 20, 0] }}
+          transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute top-1/2 left-1/3 w-[400px] h-[400px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(139,92,246,0.10) 0%, transparent 70%)' }}
+        />
+
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-dark to-transparent" />
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8">
-          
-          {/* Main Content Area */}
-          <motion.div 
-            className="w-full lg:w-5/12 text-center lg:text-left pt-10 lg:pt-0"
-            initial={{ opacity: 0, y: 40 }}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-10">
+
+          {/* --- Left: Content --- */}
+          <motion.div
+            className="w-full lg:w-1/2 text-center lg:text-left"
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.9, ease: 'easeOut' }}
           >
-            {/* Pill badge */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm text-sm font-semibold text-slate-700 mb-8"
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-primary/30 text-primary text-sm font-semibold mb-8"
             >
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
-              Premium IT Training in Jalgaon
+              Agency · Software · Education
             </motion.div>
-            
-            <h1 className="text-5xl lg:text-7xl font-black text-dark tracking-tight leading-[1.1] mb-6">
-              Empowering Your <br className="hidden lg:block"/>
-              <span className="text-gradient">Digital Future</span>
+
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08] mb-6 tracking-tight">
+              <span className="text-white">Simplifying Growth</span>{' '}
+              <br className="hidden lg:block" />
+              <span className="text-white">Through </span>
+              <span className="text-gradient">Strategy,</span>
+              <br className="hidden sm:block" />
+              <span className="text-white">Software</span>
+              <span className="text-slate-400">, and </span>
+              <span className="text-gradient-gold">Knowledge.</span>
             </h1>
-            
-            <p className="text-lg lg:text-xl text-slate-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-              Transform your career with hands-on Full-Stack Development & Core Programming courses designed by industry experts.
+
+            <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              One hybrid firm that markets your brand, builds your software, and upskills your team — everything you need to scale, under one roof.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+
+            {/* Dual CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
-                to="courses"
+                to="triple-pillar"
                 smooth={true}
-                offset={-100}
+                offset={-80}
                 duration={800}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-dark text-white font-bold text-lg hover:bg-primary shadow-xl shadow-dark/20 hover:shadow-primary/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full shimmer-btn text-white font-bold text-base shadow-xl shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
-                Explore Courses <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                Explore Solutions
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="contact"
+                to="education"
                 smooth={true}
-                offset={-100}
+                offset={-80}
                 duration={800}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-dark font-bold text-lg border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full glass border border-white/10 text-white font-bold text-base hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
-                Contact Us
+                <Play size={16} className="fill-white" />
+                Start Learning
               </Link>
             </div>
-            
-            {/* Trust metrics */}
-           
+
+            {/* Metric Pills */}
+            <div className="mt-12 flex flex-wrap gap-3 justify-center lg:justify-start">
+              {metrics.map((m, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + i * 0.1 }}
+                  className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-white/8"
+                >
+                  <span className={m.color}>{m.icon}</span>
+                  <span className={`font-black text-sm ${m.color}`}>{m.value}</span>
+                  <span className="text-slate-400 text-xs font-medium">{m.label}</span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Premium 3D-like Mockup Composition */}
-          <motion.div 
-            className="w-full lg:w-7/12 relative mt-8 lg:mt-0"
-            initial={{ opacity: 0, scale: 0.95 }}
+          {/* --- Right: Floating Visual --- */}
+          <motion.div
+            className="w-full lg:w-1/2 relative"
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
           >
-            {/* Outer decorative ring container */}
-            <div className="relative w-full max-w-2xl mx-auto aspect-square lg:aspect-auto lg:h-[600px] flex items-center justify-center">
-              
-              {/* Backglow layer */}
-              <div className="absolute inset-10 bg-gradient-to-tr from-primary/30 via-accent/20 to-secondary/30 rounded-[3rem] blur-2xl transform -rotate-6"></div>
+            <div className="relative max-w-lg mx-auto">
+              {/* Glow behind */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/15 to-gold/10 rounded-3xl blur-3xl scale-110" />
 
-              {/* Main IDE Window Mockup */}
-              <motion.div 
-                className="relative w-[90%] lg:w-full z-20 rounded-2xl glass-dark border-t border-white/10 overflow-hidden transform group perspective-1000"
-                whileHover={{ rotateY: -2, rotateX: 2, scale: 1.02 }}
-                transition={{ duration: 0.4 }}
-              >
-                {/* IDE Header */}
-                <div className="flex items-center justify-between px-4 py-3 bg-slate-900/90 border-b border-white/5">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500 border border-red-600"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500 border border-yellow-600"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500 border border-green-600"></div>
+              {/* Main card */}
+              <div className="relative glass-card rounded-3xl p-8 border border-white/8">
+                {/* Three pillar mini-cards */}
+                <div className="grid grid-cols-3 gap-3 mb-6">
+                  {[
+                    { label: 'Marketing Agency', color: 'from-primary/20 to-primary/5', border: 'border-primary/30', dot: 'bg-primary', icon: '📈' },
+                    { label: 'SaaS Platform', color: 'from-accent/20 to-accent/5', border: 'border-accent/30', dot: 'bg-accent', icon: '⚙️' },
+                    { label: 'Education Hub', color: 'from-gold/20 to-gold/5', border: 'border-gold/30', dot: 'bg-gold', icon: '🎓' },
+                  ].map((card, i) => (
+                    <motion.div
+                      key={i}
+                      className={`bg-gradient-to-br ${card.color} border ${card.border} rounded-2xl p-4 flex flex-col items-center gap-2 text-center hover:scale-105 transition-transform duration-300`}
+                      animate={{ y: [0, -6, 0] }}
+                      transition={{ duration: 4 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.8 }}
+                    >
+                      <span className="text-2xl">{card.icon}</span>
+                      <p className="text-[10px] font-bold text-slate-300 leading-tight">{card.label}</p>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* Growth chart visualisation */}
+                <div className="bg-dark/80 rounded-2xl p-5 border border-white/6">
+                  <div className="flex justify-between items-center mb-4">
+                    <div>
+                      <p className="text-slate-400 text-xs font-medium">Business Growth</p>
+                      <p className="text-white font-black text-xl tracking-tight">+340% YoY</p>
+                    </div>
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-bold border border-emerald-500/30">↑ Live</span>
                   </div>
-                  <div className="text-xs font-mono text-slate-400 font-medium">index.js — SaralSolutions</div>
-                  <div className="flex space-x-2">
-                    <Cpu size={14} className="text-slate-500" />
+
+                  {/* Bar chart */}
+                  <div className="flex items-end gap-2 h-16">
+                    {[30, 45, 38, 60, 55, 75, 68, 88, 80, 100].map((h, i) => (
+                      <motion.div
+                        key={i}
+                        className="flex-1"
+                        initial={{ scaleY: 0 }}
+                        animate={{ scaleY: 1 }}
+                        transition={{ delay: 0.8 + i * 0.05, duration: 0.5 }}
+                        style={{ height: `${h}%`, background: i > 6 ? 'linear-gradient(to top, #3B82F6, #60A5FA)' : 'rgba(59,130,246,0.25)', borderRadius: '3px 3px 0 0' }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="flex justify-between mt-2">
+                    <span className="text-slate-600 text-[10px]">Q1 2023</span>
+                    <span className="text-primary text-[10px] font-semibold">Q1 2025</span>
                   </div>
                 </div>
-                
-                {/* IDE Body */}
-                <div className="p-6 md:p-8 font-mono text-sm md:text-base leading-relaxed text-slate-300 min-h-[300px]">
-                  <p className="flex"><span className="text-slate-500 mr-4 select-none">1</span><span className="text-purple-400 font-bold">import</span> {'{'} Future {'}'} <span className="text-purple-400 font-bold">from</span> <span className="text-emerald-300">'@saralsolutions/core'</span>;</p>
-                  <p className="flex mt-2"><span className="text-slate-500 mr-4 select-none">2</span><span className="text-slate-500 italic">// Initialize your success journey</span></p>
-                  <p className="flex"><span className="text-slate-500 mr-4 select-none">3</span><span className="text-blue-400 font-bold">const</span> <span className="text-yellow-200">developer</span> <span className="text-accent">=</span> <span className="text-blue-400 font-bold">new</span> <span className="text-yellow-400">Future</span>();</p>
-                  <p className="flex mt-4"><span className="text-slate-500 mr-4 select-none">4</span><span className="text-purple-400 font-bold">async function</span> <span className="text-blue-300">startCareer</span>() {'{'}</p>
-                  <p className="flex"><span className="text-slate-500 mr-4 select-none">5</span>  <span className="text-purple-400 font-bold">await</span> developer.<span className="text-blue-300">learn</span>(['React', 'Node.js', 'Python']);</p>
-                  <p className="flex"><span className="text-slate-500 mr-4 select-none">6</span>  <span className="text-purple-400 font-bold">await</span> developer.<span className="text-blue-300">buildProjects</span>();</p>
-                  <p className="flex"><span className="text-slate-500 mr-4 select-none">7</span>  </p>
-                  <p className="flex"><span className="text-slate-500 mr-4 select-none">8</span>  <span className="text-purple-400 font-bold">return</span> developer.<span className="text-blue-300">getHired</span>({'{'} role: <span className="text-emerald-300">'Full Stack Eng'</span> {'}'});</p>
-                  <p className="flex"><span className="text-slate-500 mr-4 select-none">9</span>{'}'}</p>
-                  
-                  {/* Blinking cursor */}
-                  <div className="flex mt-2"><span className="text-slate-500 mr-4 select-none">10</span><span className="w-2.5 h-5 bg-white/70 animate-pulse inline-block align-middle ml-1"></span></div>
-                </div>
-                
-                {/* IDE Footer glow */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-50"></div>
-              </motion.div>
 
+                {/* Bottom row */}
+                <div className="mt-4 flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    {['💼','🚀','🎯'].map((e, i) => (
+                      <div key={i} className="w-8 h-8 rounded-full bg-dark-lighter border-2 border-dark flex items-center justify-center text-sm">{e}</div>
+                    ))}
+                  </div>
+                  <p className="text-slate-400 text-xs"><span className="text-white font-semibold">120+ businesses</span> already scaling with Saral</p>
+                </div>
+              </div>
             </div>
           </motion.div>
-          
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <p className="text-slate-500 text-xs font-medium tracking-widest uppercase">Scroll</p>
+        <div className="w-[1px] h-8 bg-gradient-to-b from-slate-500 to-transparent" />
+      </motion.div>
     </section>
   );
 };

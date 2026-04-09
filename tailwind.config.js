@@ -12,24 +12,37 @@ export default {
       },
       colors: {
         primary: {
-          light: '#3b82f6',
-          DEFAULT: '#1d4ed8', // Deep modern blue
-          dark: '#1e3a8a',
+          light: '#60A5FA',
+          DEFAULT: '#3B82F6', // Electric Blue
+          dark: '#1D4ED8',
         },
         secondary: {
-          DEFAULT: '#0ea5e9', // Vibrant sky blue
+          DEFAULT: '#0EA5E9',
         },
         accent: {
-          DEFAULT: '#8b5cf6', // Purple accent for tech feel
+          DEFAULT: '#8B5CF6',
+        },
+        gold: {
+          light: '#FCD34D',
+          DEFAULT: '#F59E0B',
+          dark: '#D97706',
         },
         dark: {
-          DEFAULT: '#0f172a',
-          lighter: '#1e293b',
-        }
+          DEFAULT: '#0A0F1E',
+          lighter: '#0F172A',
+          card: '#111827',
+        },
       },
       animation: {
         'blob': 'blob 7s infinite',
         'spin-slow': 'spin 15s linear infinite',
+        'marquee': 'marquee 35s linear infinite',
+        'marquee2': 'marquee2 35s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 6s ease-in-out 2s infinite',
+        'float-slow': 'float 8s ease-in-out 1s infinite',
+        'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+        'shimmer': 'shimmer 2.5s linear infinite',
       },
       keyframes: {
         blob: {
@@ -37,8 +50,28 @@ export default {
           '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
           '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
           '100%': { transform: 'translate(0px, 0px) scale(1)' },
-        }
-      }
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-18px)' },
+        },
+        'glow-pulse': {
+          '0%, 100%': { opacity: '0.4' },
+          '50%': { opacity: '0.9' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+      },
     },
   },
   plugins: [],
