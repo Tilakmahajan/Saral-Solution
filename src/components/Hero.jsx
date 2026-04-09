@@ -66,7 +66,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
-              Agency · Software · Education
+              Education · Agency · Software
             </motion.div>
 
             {/* Headline */}
@@ -74,15 +74,15 @@ const Hero = () => {
               <span className="text-white">Simplifying Growth</span>{' '}
               <br className="hidden lg:block" />
               <span className="text-white">Through </span>
-              <span className="text-gradient">Strategy,</span>
+              <span className="text-gradient">Knowledge,</span>
               <br className="hidden sm:block" />
-              <span className="text-white">Software</span>
+              <span className="text-white">Strategy</span>
               <span className="text-slate-400">, and </span>
-              <span className="text-gradient-gold">Knowledge.</span>
+              <span className="text-gradient-gold">Software.</span>
             </h1>
 
             <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-              One hybrid firm that markets your brand, builds your software, and upskills your team — everything you need to scale, under one roof.
+              One hybrid firm that upskills your team, markets your brand, and builds your software — everything you need to scale, under one roof.
             </p>
 
             {/* Dual CTAs */}
@@ -129,7 +129,7 @@ const Hero = () => {
 
           {/* --- Right: Floating Visual --- */}
           <motion.div
-            className="w-full lg:w-1/2 relative"
+            className="w-full lg:w-1/2 relative lg:-mt-[350px]"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
@@ -143,9 +143,9 @@ const Hero = () => {
                 {/* Three pillar mini-cards */}
                 <div className="grid grid-cols-3 gap-3 mb-6">
                   {[
+                    { label: 'Education Hub', color: 'from-gold/20 to-gold/5', border: 'border-gold/30', dot: 'bg-gold', icon: '🎓' },
                     { label: 'Marketing Agency', color: 'from-primary/20 to-primary/5', border: 'border-primary/30', dot: 'bg-primary', icon: '📈' },
                     { label: 'SaaS Platform', color: 'from-accent/20 to-accent/5', border: 'border-accent/30', dot: 'bg-accent', icon: '⚙️' },
-                    { label: 'Education Hub', color: 'from-gold/20 to-gold/5', border: 'border-gold/30', dot: 'bg-gold', icon: '🎓' },
                   ].map((card, i) => (
                     <motion.div
                       key={i}

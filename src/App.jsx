@@ -3,10 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TriplePillar from './components/TriplePillar';
 import About from './components/About';
-import SaralProcess from './components/SaralProcess';
-import ResourceHub from './components/ResourceHub';
 import SocialProof from './components/SocialProof';
-import LeadMagnet from './components/LeadMagnet';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -18,10 +15,7 @@ function App() {
         <Hero />
         <TriplePillar />
         <About />
-        <SaralProcess />
-        <ResourceHub />
         <SocialProof />
-        <LeadMagnet />
         <Contact />
       </main>
       <Footer />

@@ -16,10 +16,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', to: 'home' },
+    { name: 'Education', to: 'education' },
     { name: 'Agency', to: 'agency' },
     { name: 'Software', to: 'software' },
-    { name: 'Education', to: 'education' },
-    { name: 'Resources', to: 'resources' },
     { name: 'Contact', to: 'contact' },
   ];
 
@@ -66,16 +65,6 @@ const Navbar = () => {
               className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-slate-200 text-sm font-semibold hover:bg-white/10 transition-all duration-300 cursor-pointer"
             >
               Contact Us
-            </Link>
-            <Link
-              to="lead-magnet"
-              smooth={true}
-              offset={-80}
-              duration={800}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white text-sm font-bold shimmer-btn hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 cursor-pointer"
-            >
-              <Zap size={15} className="text-yellow-300" />
-              Free Audit
             </Link>
           </div>
 
@@ -139,17 +128,6 @@ const Navbar = () => {
                   ))}
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-3">
-                  <Link
-                    to="lead-magnet"
-                    smooth={true}
-                    duration={500}
-                    className="w-full shimmer-btn text-white text-center rounded-xl py-3.5 font-bold tracking-wide flex items-center justify-center gap-2 cursor-pointer"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Zap size={16} className="text-yellow-300" /> Get Free Audit
-                  </Link>
-                </div>
               </div>
             </motion.div>
           </>

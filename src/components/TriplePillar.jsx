@@ -10,58 +10,8 @@ import { Link } from 'react-scroll';
 
 const pillars = [
   {
-    id: 'agency',
-    tag: 'Division 01',
-    title: 'Marketing Agency',
-    headline: 'ROI-Driven Brand Strategy',
-    description: 'We don\'t just run ads. We architect full-funnel growth systems — SEO, paid media, content, and brand positioning that converts.',
-    icon: <TrendingUp size={32} strokeWidth={1.5} />,
-    emoji: '📈',
-    color: 'blue',
-    gradient: 'from-primary/20 via-blue-500/10 to-transparent',
-    border: 'border-primary/25',
-    hoverBorder: 'hover:border-primary/60',
-    glowClass: 'glow-blue',
-    borderGlow: 'border-glow-blue',
-    accentColor: '#3B82F6',
-    metrics: [
-      { label: 'Avg. ROI', value: '340%', icon: <TrendingUp size={14} /> },
-      { label: 'Clients', value: '80+', icon: <Users size={14} /> },
-      { label: 'Campaigns', value: '200+', icon: <BarChart3 size={14} /> },
-    ],
-    services: ['Brand Identity', 'Performance Ads', 'SEO & Content', 'Social Media'],
-    cta: { label: 'Free Marketing Audit', to: 'lead-magnet' },
-    ctaSecondary: { label: 'View Agency Work', to: 'contact' },
-    icons: [<BarChart3 size={18} />, <Megaphone size={18} />, <TrendingUp size={18} />],
-  },
-  {
-    id: 'software',
-    tag: 'Division 02',
-    title: 'SaaS & Software',
-    headline: 'Automation & Infrastructure',
-    description: 'Custom SaaS platforms, automation workflows, and tech infrastructure built to eliminate bottlenecks and scale your operations.',
-    icon: <Server size={32} strokeWidth={1.5} />,
-    emoji: '⚙️',
-    color: 'purple',
-    gradient: 'from-accent/20 via-purple-500/10 to-transparent',
-    border: 'border-accent/25',
-    hoverBorder: 'hover:border-accent/60',
-    glowClass: 'glow-purple',
-    borderGlow: 'border-glow-purple',
-    accentColor: '#8B5CF6',
-    metrics: [
-      { label: 'Tools Built', value: '35+', icon: <Cpu size={14} /> },
-      { label: 'Uptime', value: '99.9%', icon: <Shield size={14} /> },
-      { label: 'Integrations', value: '50+', icon: <Layers size={14} /> },
-    ],
-    services: ['SaaS Development', 'API Integrations', 'AI Automation', 'Cloud Architecture'],
-    cta: { label: 'Request SaaS Demo', to: 'lead-magnet' },
-    ctaSecondary: { label: 'View Products', to: 'resources' },
-    icons: [<Cpu size={18} />, <Bot size={18} />, <Server size={18} />],
-  },
-  {
     id: 'education',
-    tag: 'Division 03',
+    tag: 'Division 01',
     title: 'Education Center',
     headline: 'Workshops & Upskilling',
     description: 'Hands-on workshops, live cohorts, and certification programs designed to close the skills gap for professionals and freshers alike.',
@@ -80,9 +30,59 @@ const pillars = [
       { label: 'Live Sessions', value: '200+', icon: <Video size={14} /> },
     ],
     services: ['Full Stack Dev', 'Digital Marketing', 'AI & ML Basics', 'Business Workshops'],
-    cta: { label: 'Browse Courses', to: 'resources' },
-    ctaSecondary: { label: 'Upcoming Webinars', to: 'resources' },
+    cta: { label: 'Browse Courses', to: 'education' },
+    ctaSecondary: { label: 'Upcoming Webinars', to: 'education' },
     icons: [<GraduationCap size={18} />, <Video size={18} />, <BookOpen size={18} />],
+  },
+  {
+    id: 'agency',
+    tag: 'Division 02',
+    title: 'Marketing Agency',
+    headline: 'ROI-Driven Brand Strategy',
+    description: 'We don\'t just run ads. We architect full-funnel growth systems — SEO, paid media, content, and brand positioning that converts.',
+    icon: <TrendingUp size={32} strokeWidth={1.5} />,
+    emoji: '📈',
+    color: 'blue',
+    gradient: 'from-primary/20 via-blue-500/10 to-transparent',
+    border: 'border-primary/25',
+    hoverBorder: 'hover:border-primary/60',
+    glowClass: 'glow-blue',
+    borderGlow: 'border-glow-blue',
+    accentColor: '#3B82F6',
+    metrics: [
+      { label: 'Avg. ROI', value: '340%', icon: <TrendingUp size={14} /> },
+      { label: 'Clients', value: '80+', icon: <Users size={14} /> },
+      { label: 'Campaigns', value: '200+', icon: <BarChart3 size={14} /> },
+    ],
+    services: ['Brand Identity', 'Performance Ads', 'SEO & Content', 'Social Media'],
+    cta: { label: 'Get Started', to: 'contact' },
+    ctaSecondary: { label: 'View Agency Work', to: 'contact' },
+    icons: [<BarChart3 size={18} />, <Megaphone size={18} />, <TrendingUp size={18} />],
+  },
+  {
+    id: 'software',
+    tag: 'Division 03',
+    title: 'SaaS & Software',
+    headline: 'Automation & Infrastructure',
+    description: 'Custom SaaS platforms, automation workflows, and tech infrastructure built to eliminate bottlenecks and scale your operations.',
+    icon: <Server size={32} strokeWidth={1.5} />,
+    emoji: '⚙️',
+    color: 'purple',
+    gradient: 'from-accent/20 via-purple-500/10 to-transparent',
+    border: 'border-accent/25',
+    hoverBorder: 'hover:border-accent/60',
+    glowClass: 'glow-purple',
+    borderGlow: 'border-glow-purple',
+    accentColor: '#8B5CF6',
+    metrics: [
+      { label: 'Tools Built', value: '35+', icon: <Cpu size={14} /> },
+      { label: 'Uptime', value: '99.9%', icon: <Shield size={14} /> },
+      { label: 'Integrations', value: '50+', icon: <Layers size={14} /> },
+    ],
+    services: ['SaaS Development', 'API Integrations', 'AI Automation', 'Cloud Architecture'],
+    cta: { label: 'Request SaaS Demo', to: 'contact' },
+    ctaSecondary: { label: 'View Products', to: 'software' },
+    icons: [<Cpu size={18} />, <Bot size={18} />, <Server size={18} />],
   },
 ];
 
@@ -230,25 +230,7 @@ const TriplePillar = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <Link
-            to="saral-process"
-            smooth={true}
-            offset={-80}
-            duration={800}
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full glass border border-white/10 text-white font-bold hover:bg-white/5 transition-all duration-300 cursor-pointer group"
-          >
-            See How It All Connects
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
+
       </div>
     </section>
   );

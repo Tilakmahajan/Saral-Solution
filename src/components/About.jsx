@@ -101,19 +101,15 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="group relative glass-card rounded-2xl border border-white/8 p-5 flex flex-col items-center gap-3 hover:border-white/20 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1 cursor-default"
+                className="group relative flex flex-col items-center gap-3 transition-all duration-300 cursor-default"
               >
-                {/* Category pill */}
-                <span className="absolute top-3 right-3 text-[10px] font-bold text-slate-500 bg-white/5 px-2 py-0.5 rounded-full">
-                  {partner.category}
-                </span>
 
                 {/* Logo container */}
-                <div className="w-full h-20 flex items-center justify-center overflow-hidden rounded-xl bg-white/5 p-3">
+                <div className="w-full h-20 flex items-center justify-center overflow-hidden">
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-500"
+                    className="max-w-full max-h-full object-contain opacity-80"
                     onError={(e) => {
                       e.target.style.display = 'none';
                       e.target.parentElement.innerHTML = `<span class="text-slate-300 text-sm font-bold text-center">${partner.name}</span>`;
@@ -121,9 +117,6 @@ const About = () => {
                   />
                 </div>
 
-                <p className="text-slate-400 text-xs font-semibold text-center group-hover:text-white transition-colors leading-tight">
-                  {partner.name}
-                </p>
               </motion.div>
             ))}
           </div>

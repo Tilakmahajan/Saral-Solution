@@ -3,24 +3,7 @@ import { motion } from 'framer-motion';
 import { Zap, BarChart3, ArrowRight, CheckCircle, Send, Server } from 'lucide-react';
 
 const cards = [
-  {
-    id: 'audit',
-    tag: 'Marketing Agency',
-    tagColor: 'text-primary bg-primary/10 border-primary/25',
-    headline: 'Get Your Free Marketing Audit',
-    subline: 'Uncover exactly where you\'re losing leads and money.',
-    description: 'Our agency team will audit your SEO, social presence, ad campaigns, and brand positioning — completely free. Walk away with a prioritised action plan.',
-    icon: <BarChart3 size={28} strokeWidth={1.5} />,
-    iconBg: 'bg-primary/15',
-    iconColor: 'text-primary',
-    gradient: 'from-primary/15 via-blue-500/5 to-transparent',
-    border: 'border-primary/25',
-    accentColor: '#3B82F6',
-    points: ['Full SEO & Content Audit', 'Ad Spend Analysis', 'Competitor Benchmark', 'Personalised Action Plan'],
-    inputPlaceholder: 'your@business.com',
-    ctaLabel: 'Request Free Audit',
-    ctaNote: '✅ No credit card. No commitment. Just clarity.',
-  },
+
   {
     id: 'demo',
     tag: 'SaaS Platform',
@@ -42,8 +25,8 @@ const cards = [
 ];
 
 const LeadMagnet = () => {
-  const [emails, setEmails] = useState({ audit: '', demo: '' });
-  const [submitted, setSubmitted] = useState({ audit: false, demo: false });
+  const [emails, setEmails] = useState({ demo: '' });
+  const [submitted, setSubmitted] = useState({ demo: false });
 
   const handleSubmit = (id, e) => {
     e.preventDefault();
@@ -70,7 +53,7 @@ const LeadMagnet = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-gold/25 text-gold text-sm font-semibold mb-5"
           >
-            <Zap size={14} className="fill-gold" /> Free Resources — No Strings Attached
+            <Zap size={14} className="fill-gold" /> Free Demo — No Strings Attached
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -92,8 +75,8 @@ const LeadMagnet = () => {
           </motion.p>
         </div>
 
-        {/* Two CTA Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* CTA Card */}
+        <div className="grid grid-cols-1 max-w-2xl mx-auto gap-8">
           {cards.map((card, i) => (
             <motion.div
               key={card.id}

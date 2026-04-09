@@ -3,26 +3,25 @@ import { Link } from 'react-scroll';
 import { Facebook, Instagram, Linkedin, Twitter, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
 
 const footerLinks = {
+  Education: [
+    { label: 'Full Stack Dev', to: 'education' },
+    { label: 'Digital Marketing', to: 'education' },
+    { label: 'AI & Automation', to: 'education' },
+    { label: 'Live Webinars', to: 'education' },
+    { label: 'Enroll Now', to: 'contact' },
+  ],
   Agency: [
     { label: 'Brand Strategy', to: 'agency' },
     { label: 'Performance Ads', to: 'agency' },
     { label: 'SEO & Content', to: 'agency' },
     { label: 'Social Media', to: 'agency' },
-    { label: 'Free Audit', to: 'lead-magnet' },
   ],
   Software: [
-    { label: 'SaralCRM', to: 'resources' },
-    { label: 'SaralFlow', to: 'resources' },
-    { label: 'SaralInsights', to: 'resources' },
+    { label: 'SaralCRM', to: 'software' },
+    { label: 'SaralFlow', to: 'software' },
+    { label: 'SaralInsights', to: 'software' },
     { label: 'Custom SaaS', to: 'contact' },
-    { label: 'Book Demo', to: 'lead-magnet' },
-  ],
-  Education: [
-    { label: 'Full Stack Dev', to: 'resources' },
-    { label: 'Digital Marketing', to: 'resources' },
-    { label: 'AI & Automation', to: 'resources' },
-    { label: 'Live Webinars', to: 'resources' },
-    { label: 'Enroll Now', to: 'contact' },
+    { label: 'Book Demo', to: 'contact' },
   ],
 };
 
@@ -70,9 +69,9 @@ const Footer = () => {
             {/* Division pills */}
             <div className="flex flex-wrap gap-2">
               {[
+                { label: '🎓 Education', color: 'text-gold bg-gold/10 border-gold/20' },
                 { label: '📈 Agency', color: 'text-primary bg-primary/10 border-primary/20' },
                 { label: '⚙️ SaaS', color: 'text-accent bg-accent/10 border-accent/20' },
-                { label: '🎓 Education', color: 'text-gold bg-gold/10 border-gold/20' },
               ].map((d) => (
                 <span key={d.label} className={`text-xs font-bold px-3 py-1 rounded-full border ${d.color}`}>
                   {d.label}

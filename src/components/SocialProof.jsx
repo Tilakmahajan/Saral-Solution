@@ -84,60 +84,8 @@ const SocialProof = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 relative z-10">
 
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-white/10 text-slate-300 text-sm font-semibold mb-5"
-          >
-            <Star size={14} className="text-gold fill-gold" /> Trusted by Businesses Across Jalgaon
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-white"
-          >
-            Our <span className="text-gradient">Partners</span> & Their Stories
-          </motion.h2>
-        </div>
 
-        {/* ---- Logo Marquee ---- */}
-        <div className="marquee-wrapper mb-4 relative">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 h-full w-24 z-10 pointer-events-none"
-            style={{ background: 'linear-gradient(to right, #070D1A, transparent)' }} />
-          <div className="absolute right-0 top-0 h-full w-24 z-10 pointer-events-none"
-            style={{ background: 'linear-gradient(to left, #070D1A, transparent)' }} />
 
-          <div className="marquee-track">
-            {allPartners.map((p, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 mx-5 flex flex-col items-center gap-3 group"
-              >
-                <div className="w-28 h-20 rounded-2xl glass-card border border-white/8 overflow-hidden flex items-center justify-center p-3 group-hover:border-white/20 group-hover:bg-white/5 transition-all duration-300">
-                  <img
-                    src={p.logo}
-                    alt={p.name}
-                    className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-500"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.parentElement.innerHTML = `<span class="text-slate-400 text-xs font-bold text-center leading-tight">${p.name}</span>`;
-                    }}
-                  />
-                </div>
-                <p className="text-slate-500 text-xs font-medium text-center whitespace-nowrap group-hover:text-slate-300 transition-colors">{p.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="my-20 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
 
         {/* ---- Testimonials Slider ---- */}
         <div className="max-w-4xl mx-auto">
