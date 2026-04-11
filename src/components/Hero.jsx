@@ -159,34 +159,13 @@ const Hero = () => {
                   ))}
                 </div>
 
-                {/* Growth chart visualisation */}
-                <div className="bg-dark/80 rounded-2xl p-5 border border-white/6">
-                  <div className="flex justify-between items-center mb-4">
-                    <div>
-                      <p className="text-slate-400 text-xs font-medium">Business Growth</p>
-                      <p className="text-white font-black text-xl tracking-tight">+340% YoY</p>
-                    </div>
-                    <span className="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-bold border border-emerald-500/30">↑ Live</span>
-                  </div>
-
-                  {/* Bar chart */}
-                  <div className="flex items-end gap-2 h-16">
-                    {[30, 45, 38, 60, 55, 75, 68, 88, 80, 100].map((h, i) => (
-                      <motion.div
-                        key={i}
-                        className="flex-1"
-                        initial={{ scaleY: 0 }}
-                        animate={{ scaleY: 1 }}
-                        transition={{ delay: 0.8 + i * 0.05, duration: 0.5 }}
-                        style={{ height: `${h}%`, background: i > 6 ? 'linear-gradient(to top, #3B82F6, #60A5FA)' : 'rgba(59,130,246,0.25)', borderRadius: '3px 3px 0 0' }}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="flex justify-between mt-2">
-                    <span className="text-slate-600 text-[10px]">Q1 2023</span>
-                    <span className="text-primary text-[10px] font-semibold">Q1 2025</span>
-                  </div>
+                {/* Banner injected here */}
+                <div className="bg-white/5 rounded-2xl p-2 border border-white/10 shadow-lg overflow-hidden scale-105 my-4 backdrop-blur-md">
+                  <img 
+                    src="/Banner.png" 
+                    alt="Saral Solutions Banner" 
+                    className="w-full h-auto rounded-xl object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                  />
                 </div>
 
                 {/* Bottom row */}
